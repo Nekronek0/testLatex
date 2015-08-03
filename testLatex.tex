@@ -1,0 +1,66 @@
+% test document to learn latex
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[version=4]{mhchem}
+\usepackage{amsmath}
+\usepackage{dcolumn}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+
+\title{Test \LaTeX{}}
+\author{CY Gerritsen, MSc\\ Laboratory of Physical Organic Chemistry\\ Institute for Molecules and Materials\\ Radboud University\\ Nijmegen}
+\date{31 July 2015}
+
+\begin{document}
+
+\maketitle
+\setcounter{tocdepth}{1}
+\tableofcontents{}
+
+\chapter{Introduction}
+Hello World!
+\section{Cheese}
+All over the world there are a lot of different cheeses, for example:
+\begin{itemize}
+\item Brie \item Gouda \item Langres \item \ldots
+
+\end{itemize}
+    \subsection{Brie} xxx
+    \subsection{Gouda} xxxx
+    \subsection{Langres} xxxxx
+    
+\section{Math}
+\begin{align}
+E &= mc^2\\
+f(x) &= x^2\\
+\hat{\theta} &= [\Phi^T \Phi]^{-1} \Phi \hat{y}
+\end{align}
+
+\section{Chemistry}
+\paragraph{The actual chemistry}
+    \ce{C12H6O12} is used to denote glucose. 
+    \ce{Ca^2+} is a Calcium ion, \ce{Cl-} a chloride ion, and \ce{SO3^2-} a sulfate ion.\\
+    \ce{Tg + Tr -> TgTr -> 2 Tr}\\
+    \ce{\alpha I ->[Ap] I} 
+
+\newcolumntype{a}{D{.}{.}{2.1}}
+\newcolumntype{d}{D{.}{.}{1.4}}
+\paragraph{The table}
+In this paragraph the table is presented.\\
+\begin{table}[h!]
+\centering
+\caption{The table with [Apep] and kflow}
+\begin{tabular}{r|a|d} \rowcolor{blue!50} \multicolumn{1}{c}{} &  \multicolumn{1}{r}{$[Ap]$} & \multicolumn{1}{l}{$k_{flow}$}\\ 
+ 1 & 31.4 & 0.234\\ 2 & 20.9 & 0.234\\ 3 & 47.1 & 0.234\\ 4 & 7.0 & 0.234\\ 5 & 31.4 & 0.156\\ 
+6 & 31.4 & 0.375\\ 7 & 31.4 & 0.0585\\ 8 & 26.2 & 0.195\\ 9 & 62.8 & 0.234\\
+\end{tabular}
+\end{table}
+\paragraph{The Figure}
+In this paragraph a figure is presented.\\
+\begin{figure}[h!]
+%\centering
+\includegraphics[scale=0.1]{x:/Documents/MATLAB/mass_compare9_7}
+\caption{Some data of fitting to dataset 9}
+\label{fig:my_label}
+\end{figure}
+\end{document}
